@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
+//Since the class handles on click and hover events it has IPointerClickHandler, IPointerExitHandler in addition to  MonoBehaviour.
 public class ShopItemScrollViewCell: MonoBehaviour, IPointerClickHandler, IPointerExitHandler {
 
     private ShopItem s;
@@ -16,7 +17,8 @@ public class ShopItemScrollViewCell: MonoBehaviour, IPointerClickHandler, IPoint
             s = value;
         }
     }
-
+    
+// for making other UI objects than buttons clickable (make sure there is a event system on the scene to detect the clicks), the objects have a on click() function on the interface
     public void OnPointerClick(PointerEventData eventData) {
         if (s.marketValue <= Star.Currency) {
             Star.Currency -= s.marketValue;

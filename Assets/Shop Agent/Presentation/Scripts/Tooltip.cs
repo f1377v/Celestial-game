@@ -17,7 +17,9 @@ public class Tooltip : MonoBehaviour {
 
     private void Awake() {
         instance = this;
+        // finding the TooltipText child within the Tooltip object(no need for specifying the parent object since the script is attached to it)
         tooltipText = transform.Find("TooltipText").GetComponent<Text>();
+
         tooltipBackgroundImage = transform.Find("TooltipBackground").GetComponent<Image>();
         tooltipBackgroundRectTransform = transform.Find("TooltipBackground").GetComponent<RectTransform>();
         Tooltip.HideTooltip();
@@ -25,7 +27,10 @@ public class Tooltip : MonoBehaviour {
 
     private void Update() {
         Vector2 localPoint;
+
+        //retrieving the mouse location on the screen using the function below
         RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Input.mousePosition, null, out localPoint);
+
         localPoint.x += 5;
         localPoint.y += -5;
         transform.localPosition = localPoint;
@@ -33,7 +38,10 @@ public class Tooltip : MonoBehaviour {
 
     private void _ShowTooltip(string tip, bool isWarning) {
         if (tip != null && tip != "") {
-            gameObject.transform.localScale = new Vector3(1, 1, 1);
+            //Scaling the game object from (0, 0, 0) which basically means hidden to (1, 1, 0).
+            gameObject.transform.localScale = new Vector3(1, 1, 0);
+            
+            //Making the gameObject the last in the hierarchy, so that it would appear the first on the screen. 
             transform.SetAsLastSibling();
 
             tooltipText.text = tip;

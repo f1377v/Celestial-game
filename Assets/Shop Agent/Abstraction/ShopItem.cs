@@ -64,6 +64,13 @@ public struct ShopItem  {
         }
     );
 
+// private string name;  
+// public string Name  
+// {  
+//    get { return this.name; }  
+//    set { this.name = value; }  
+// } 
+// The above lines of code is equivalent to the one line of code below 
     public string name {
         get;
     }

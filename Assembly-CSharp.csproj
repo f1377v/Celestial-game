@@ -59,7 +59,6 @@
      <Compile Include="Assets\HomeScreen\HomeScreen.cs" />
      <Compile Include="Assets\HomeScreen\QuitScreen.cs" />
      <Compile Include="Assets\HomeScreen\Tutorial.cs" />
-     <Compile Include="Assets\HomeScreen\Upgrade.cs" />
      <Compile Include="Assets\Leaderboard\controller\HighscoreTable.cs" />
      <Compile Include="Assets\Login\abstraction\loginInfo.cs" />
      <Compile Include="Assets\Login\controller\Login.cs" />

@@ -21,6 +21,7 @@ public class HomeScreen : MonoBehaviour
     public GameObject whiteStar;
 	
 	void Start(){
+        PlayerPrefs.DeleteAll();
         
         // PlayerPrefs.DeleteAll();
         // if the mass is between 0 and 20 activate the dying star and deactivate the previous star (downgrade)
