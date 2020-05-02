@@ -5,6 +5,7 @@ using System;
 
 public struct ShopItem  {
     public static ShopItem HydrogenAtoms = new ShopItem(
+        "fuel",
         "Hydrogen Atoms",
         SpriteAccessor.instance.HydrogenAtoms,
         "+3 fuel\n\nStars undergo nuclear reactions which convert \n hydrogen nuclei to helium nuclei, releasing excess energy. In other words, make atoms go boom.",
@@ -15,6 +16,7 @@ public struct ShopItem  {
     );
 
     public static ShopItem SmallRock = new ShopItem(
+        "mass",
         "Small Rock",
         SpriteAccessor.instance.SmallRock,
         "+3 mass\n\nA star's third favourite snack.",
@@ -25,6 +27,7 @@ public struct ShopItem  {
     );
 
     public static ShopItem SmallStar = new ShopItem(
+        "fuel",
         "Small Star",
         SpriteAccessor.instance.SmallStar,
         "+10 fuel\n\n Make your star consume a smaller star! It's not cannibalism\nbecause these stars aren't ACTUALLY living creatures... right?",
@@ -35,6 +38,7 @@ public struct ShopItem  {
     );
 
     public static ShopItem MediumRock = new ShopItem(
+        "mass",
         "Medium Rock",
         SpriteAccessor.instance.MediumRock,
         "+7 mass\n\nA star's second favourite snack.",
@@ -45,6 +49,7 @@ public struct ShopItem  {
     );
 
     public static ShopItem PersonYouHate = new ShopItem(
+        "mass",
         "A Person You Hate",
         SpriteAccessor.instance.PersonYouHate,
         "+100 Fuel\n\nSend your enemy to your star! Nothing is better fuel than hatred.",
@@ -55,6 +60,7 @@ public struct ShopItem  {
     );
 
     public static ShopItem LargeRock = new ShopItem(
+        "mass",
         "Large Rock",
         SpriteAccessor.instance.LargeRock,
         "+15 mass\n\nA star's favourite snack... wait a minute",
@@ -71,6 +77,9 @@ public struct ShopItem  {
 //    set { this.name = value; }  
 // } 
 // The above lines of code is equivalent to the one line of code below 
+    public string type {
+        get;
+    }
     public string name {
         get;
     }
@@ -91,7 +100,9 @@ public struct ShopItem  {
         get;
     }
 
-    public ShopItem(string name, Sprite icon, string description, int marketValue, Action action) {
+
+    public ShopItem(string type, string name, Sprite icon, string description, int marketValue, Action action) {
+        this.type = type;
         this.name = name;
         this.icon = icon;
         this.description = description;

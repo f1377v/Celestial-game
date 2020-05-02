@@ -24,11 +24,4 @@ public class SpriteAccessor: MonoBehaviour {
     public Sprite LargeRock;
     public Sprite MediumRock;
 
-    // Stars
-    public Sprite dyingStar;
-    public Sprite startStar;
-    public Sprite redStar;
-    public Sprite purpleStar;
-    public Sprite whiteStar;
-    public Sprite superNova;
 }

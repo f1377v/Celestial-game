@@ -46,7 +46,7 @@ public class Star {
 
         get {
             if (!PlayerPrefs.HasKey(Login.Username + ".currency")) {
-                PlayerPrefs.SetInt(Login.Username + ".currency", 100);
+                PlayerPrefs.SetInt(Login.Username + ".currency", 400);
             }
             return PlayerPrefs.GetInt(Login.Username + ".currency");
         }

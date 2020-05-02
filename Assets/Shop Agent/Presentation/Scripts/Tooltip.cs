@@ -43,14 +43,21 @@ public class Tooltip : MonoBehaviour {
             
             //Making the gameObject the last in the hierarchy, so that it would appear the first on the screen. 
             transform.SetAsLastSibling();
-
-            tooltipText.text = tip;
             if (isWarning) {
                 tooltipText.color = Color.white;
                 tooltipBackgroundImage.color = Color.red;
-            } else {
+                tooltipText.text = tip;
+            }
+            else if (tip.Substring(0, 7) == "Success") {
+                tooltipText.color = Color.white;
+                tooltipBackgroundImage.color = Color.green;
+                // substring(8) to get rid of the success in the beginning of the sentence
+                tooltipText.text = tip.Substring(8);
+            }
+            else{
                 tooltipText.color = Color.white;
                 tooltipBackgroundImage.color = Color.black;
+                tooltipText.text = tip;              
             }
             float textPaddingSize = 4f;
 

@@ -55,7 +55,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Asset Store\Sound.cs" />
      <Compile Include="Assets\Global Events\GlobalEvents.cs" />
+     <Compile Include="Assets\HomeScreen\AudioManager.cs" />
      <Compile Include="Assets\HomeScreen\HomeScreen.cs" />
      <Compile Include="Assets\HomeScreen\QuitScreen.cs" />
      <Compile Include="Assets\HomeScreen\Tutorial.cs" />
@@ -73,18 +75,17 @@
      <Compile Include="Assets\Minigame\Script\Spawn.cs" />
      <Compile Include="Assets\Pop_up_ex\UpgradePopup.cs" />
      <Compile Include="Assets\Resources\SpriteAccessor\SpriteAccessor.cs" />
-     <Compile Include="Assets\SettingsMenu.cs" />
      <Compile Include="Assets\Shop Agent\Abstraction\Shop.cs" />
      <Compile Include="Assets\Shop Agent\Abstraction\ShopItem.cs" />
+     <Compile Include="Assets\Shop Agent\Presentation\ItemScrollViewCell\Scripts\ItemInfoIcon.cs" />
+     <Compile Include="Assets\Shop Agent\Presentation\ItemScrollViewCell\Scripts\ShopItemScrollViewCell.cs" />
      <Compile Include="Assets\Shop Agent\Presentation\Scripts\CurrencyAvailableAmount.cs" />
      <Compile Include="Assets\Shop Agent\Presentation\Scripts\PreviousScreenIcon.cs" />
      <Compile Include="Assets\Shop Agent\Presentation\Scripts\ShopSectionScrollViewContentView.cs" />
      <Compile Include="Assets\Shop Agent\Presentation\Scripts\Tooltip.cs" />
-     <Compile Include="Assets\Shop Agent\Presentation\ShopItemScrollViewCell\Scripts\ItemInfoIcon.cs" />
-     <Compile Include="Assets\Shop Agent\Presentation\ShopItemScrollViewCell\Scripts\ShopItemScrollViewCell.cs" />
-     <Compile Include="Assets\Shop Agent\Presentation\ShopSectionScrollViewCell\Scripts\NestedScrollRect.cs" />
-     <Compile Include="Assets\Shop Agent\Presentation\ShopSectionScrollViewCell\Scripts\ShopItemScrollViewContentView.cs" />
-     <Compile Include="Assets\Shop Agent\Presentation\ShopSectionScrollViewCell\Scripts\ShopSectionScrollViewCell.cs" />
+     <Compile Include="Assets\Shop Agent\Presentation\SectionScrollViewCell\Scripts\NestedScrollRect.cs" />
+     <Compile Include="Assets\Shop Agent\Presentation\SectionScrollViewCell\Scripts\ShopItemScrollViewContentView.cs" />
+     <Compile Include="Assets\Shop Agent\Presentation\SectionScrollViewCell\Scripts\ShopSectionScrollViewCell.cs" />
      <Compile Include="Assets\Shop Agent\ShopController.cs" />
      <Compile Include="Assets\Star Agent\Star.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
