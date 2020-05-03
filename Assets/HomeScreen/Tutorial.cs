@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Tutorial : MonoBehaviour {
-    int scene = 1;
+    int scene = 0;
     static bool done = false;
 
     void Start() {
         if (done) {
-            GameObject.Find("1").SetActive(false);
+            GameObject.Find("0").SetActive(false);
         }
     }
 

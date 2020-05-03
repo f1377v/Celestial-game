@@ -3,37 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Star {
-    public static int MinFuel = 0;
-    public static int MaxFuel = 999_999_999;
+    private static int MinFuel = 0;
+    private static int MaxFuel = 999_999_999;
+    private static int MinCurrency = 0;
+    private static int MaxCurrency = 999_999_999;
 
-    public static int MinCurrency = 0;
-    public static int MaxCurrency = 999_999_999;
 
-    public static int Mass {
+    public static double Mass {
         set {
-            PlayerPrefs.SetInt(Login.Username + ".mass", value);
+            string Mass_value_String = value.ToString(); 
+            PlayerPrefs.SetString(Login.Username + ".mass", Mass_value_String);
         }
         
         get {
             if (!PlayerPrefs.HasKey(Login.Username + ".mass")) {
-                PlayerPrefs.SetInt(Login.Username + ".mass", 30);
-            } 
-            return PlayerPrefs.GetInt(Login.Username + ".mass");
+                PlayerPrefs.SetString(Login.Username + ".mass", "30.0");
+            }
+            string tempPStr = PlayerPrefs.GetString(Login.Username + ".mass");
+            return double.Parse(tempPStr, System.Globalization.CultureInfo.InvariantCulture);
         }
     }
 
-    public static int Fuel {
+    public static double Fuel {
         set {
             if (MinFuel <= value && value <= MaxFuel){
-                PlayerPrefs.SetInt(Login.Username + ".fuel", value);
+                string Fuel_value_String = value.ToString();
+                PlayerPrefs.SetString(Login.Username + ".fuel", Fuel_value_String);
             }
         }
 
         get {
             if (!PlayerPrefs.HasKey(Login.Username + ".fuel")) {
-                PlayerPrefs.SetInt(Login.Username + ".fuel", 100);
+                PlayerPrefs.SetString(Login.Username + ".fuel", "100.0");
             } 
-            return PlayerPrefs.GetInt(Login.Username + ".fuel");
+            string tempPStr = PlayerPrefs.GetString(Login.Username + ".fuel");
+            return double.Parse(tempPStr, System.Globalization.CultureInfo.InvariantCulture);
         }
     }
     

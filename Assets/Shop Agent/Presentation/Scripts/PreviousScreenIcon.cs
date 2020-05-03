@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class PreviousScreenIcon : MonoBehaviour, IPointerClickHandler {
     public void OnPointerClick(PointerEventData eventData) {
+        FindObjectOfType<AudioManager>().Play("Back");  
         ShopController.TerminateShop();
     }
 }

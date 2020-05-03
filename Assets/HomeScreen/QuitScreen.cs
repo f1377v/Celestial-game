@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class QuitScreen : MonoBehaviour {
     public void QuitGame ()
     {
         Debug.Log ("QUIT!");
+        PlayerPrefs.SetString(Login.Username + ".quitTime", System.DateTime.Now.ToBinary().ToString());
         Application.Quit();
     }
 

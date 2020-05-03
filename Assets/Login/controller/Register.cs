@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
-using UnityEngine.UI;
 
 
 public class Register : MonoBehaviour{
