@@ -20,8 +20,6 @@ public class HomeScreen : MonoBehaviour
     public GameObject MassBar;
 	
 	void Start(){
-        PlayerPrefs.DeleteAll();
-        
         //Checks how long it has passed since the user last played the game and updates fuel and mass accordingly
         updateState();
 
@@ -54,17 +52,6 @@ public class HomeScreen : MonoBehaviour
 
             timer = timer - 189.0f;
         };
-
-        if ( Input.GetKeyDown ("0") ) {Star.Mass = 0.0;}
-        if ( Input.GetKeyDown ("1") ) {Star.Mass = 10.0; Debug.Log("1");}
-        if ( Input.GetKeyDown ("2") ) {Star.Mass = 20.0;}
-        if ( Input.GetKeyDown ("3") ) {Star.Mass = 50.0; Debug.Log("3");}
-        if ( Input.GetKeyDown ("4") ) {Star.Mass = 70.0;}
-        if ( Input.GetKeyDown ("5") ) {Star.Mass = 90.0;}
-
-        if ( Input.GetKeyDown ("h") ) {Star.Fuel = 40.0;}
-        if ( Input.GetKeyDown ("f") ) {Star.Fuel = 15.0;}
-        if ( Input.GetKeyDown ("z") ) {Star.Fuel = 0.0;}
 
         upgrade();
     }
