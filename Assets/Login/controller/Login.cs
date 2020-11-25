@@ -91,9 +91,11 @@ public class Login : MonoBehaviour{
     }
 
     private void loadStar() {
-        Star.Mass = PlayerPrefs.GetInt(Username + ".mass", 100);
-        Star.Fuel = PlayerPrefs.GetInt(Username + ".fuel", 100);
-        Star.Currency = PlayerPrefs.GetInt(Username + ".currency", 0);
+        PlayerPrefs.GetString(Username + ".mass", "30.0");
+        //Star.Mass = PlayerPrefs.GetInt(Username + ".mass", 100);
+        PlayerPrefs.GetString(Username + ".fuel", "100.0");
+        //Star.Fuel = PlayerPrefs.GetInt(Username + ".fuel", 100);
+        Star.Currency = PlayerPrefs.GetInt(Username + ".currency", 400);
     }
 
     // Update is called once per frame

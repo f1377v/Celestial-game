@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Star {
     private static int MinFuel = 0;
-    private static int MaxFuel = 999_999_999;
+    private static int MaxFuel = 100;
     private static int MinCurrency = 0;
     private static int MaxCurrency = 999_999_999;
 

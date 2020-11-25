@@ -16,7 +16,7 @@ public class QuitScreen : MonoBehaviour {
         PlayerPrefs.DeleteKey(Login.Username + ".mass");
         PlayerPrefs.DeleteKey(Login.Username + ".fuel");
         PlayerPrefs.DeleteKey(Login.Username + ".currency");
+        PlayerPrefs.DeleteKey(Login.Username + ".quitTime");
         SceneManager.LoadScene("Login/presentation/Login");
-        Debug.Log("Restart");
     }  
 }
